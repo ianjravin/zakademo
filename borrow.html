@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>
+		Zaka - New Registration
+	</title>
+	<meta name="description" content="This is the helping website to help each other" />
+	<meta name="keywords" content="Best helping, Helping concept, MMM" />
+	<meta name="author" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="vendor/magnific/magnific-popup.css" rel="stylesheet" type="text/css" />
+	<link href="vendor/owl-carousel/css/owl.carousel.css" rel="stylesheet" type="text/css" />
+	<link href="vendor/owl-carousel/css/owl.theme.css" rel="stylesheet" type="text/css" />
+	<link href="css/custom.css" rel="stylesheet" type="text/css" />
+	<link href="colors/color3.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+</head>
+
+<body>
+	<div class="body">
+		<div class="site-header-wrapper">
+			<header class="site-header">
+				<div class="container">
+					<div class="site-logo"><a href="index.html" class="default-logo"><img src="images/logo.png" alt="Logo" /></a><a href="index.html" class="default-retina-logo"><img src="images/logo@2x.png" alt="Logo" width="199" height="30" /></a><a href="index.html" class="sticky-logo"><img src="images/sticky-logo.png" alt="Logo" /></a>
+						<a
+						  href="index.html" class="sticky-retina-logo"><img src="images/sticky-logo@2x.png" alt="Logo" width="199" height="30" /></a>
+					</div><a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
+					<ul class="sf-menu dd-menu pull-right" role="menu">
+						<li><a href="index.html">Home</a>
+							<ul></ul>
+						</li>
+						<li><a href="about.html">About</a>
+							<ul></ul>
+						</li>
+						<li><a href="opp.html">Opportunities</a>
+							<ul></ul>
+						</li>
+						<li><a href="faq.html">FAQs</a>
+							<ul></ul>
+						</li>
+						<li><a href="contact.html">Contact us</a>
+							<ul></ul>
+						</li>
+						<li><a href="logme.html"><i class="fa fa-user "></i> Login</a></li>
+					</ul>
+				</div>
+			</header>
+		</div>
+		<div class="hero-area">
+			<div class="page-banner parallax" style="background-image:url('images/cont.jpg' );">
+				<div class="container">
+					<div class="page-banner-text">
+						<h1 class="block-title">Send Request</h1></div>
+				</div>
+			</div>
+		</div>
+		<div id="main-container">
+			<div class="content">
+				<div class="container">
+					<div class="row">
+						<h1>Please fill in this form</h1>
+						<div class="col-md-8 content-block">
+							<div class="col-md-1 col-sm-1"></div>
+							<div class="col-md-6 col-sm-6"><span class="event-date"><span id="sday" class="date"></span><span id="sMon" class="month"></span><span id="sYr" class="year"></span></span><span id="result" class="meta-data-thick" style="color:red"></span>
+								<script type="text/javascript">
+									window.onload = function() {
+										var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];;
+										var date = new Date();
+										document.getElementById('sday').innerHTML = [date.getDate()];
+										document.getElementById('sMon').innerHTML = months[date.getMonth()];
+										document.getElementById('sYr').innerHTML = date.getFullYear();
+									};
+								</script>
+							</div>
+							<h3>Please fill in this form and we will get in contact with you</h3>
+							<div id="errmsg" style="color:red"></div>
+							<hr />
+							<form method="post" action="./regme.html" id="form1">
+								<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+								<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAqvVXD1oYELeveMr0vHCmYPcwJ3nnvaQIn5+1AliMVz6lQg59qX54HeT0pfUdX3dFjJ6oZmddSeGGr7ztaC9GnlVKHLOnqGXt8rEynZhaxdRaq8cEH+ygZasha367zDMIpFOSa3dWdlAnARfx4my811D09KZYn8N+rggLU8Jq1TFKViLyJklhALwoW0bbu9ylhj6hgykA0lXZrQADU5LAoAcpZpdPqHJV4UNrZapM/TCXMWYDw="
+								/>
+								<div class="row">
+									<div class="col-md-1 col-sm-1"></div>
+									<div class="col-md-3 col-sm-3" style="padding-top:10px;">First Name  <span style="color:red">*</span></div>
+									<div class="col-md-4 col-sm-4"><input name="txtsp" type="text" maxlength="30" id="txtsp" class="form-control" placeholder="Sponsor id" required="" onblur="Findsponsor()" /></div>
+									<div class="col-md-4 col-sm-4"><span id="sponsor" class="meta-data-thick"></span></div>
+								</div>
+								<div class="row">
+									<div class="col-md-1 col-sm-1"></div>
+									<div class="col-md-3 col-sm-3" style="padding-top:10px;">Last name <span style="color:red">*</span> </div>
+									<div class="col-md-4 col-sm-4"><input name="txtname" type="text" maxlength="50" id="txtname" class="form-control" placeholder="Full name" required="" /></div>
+								</div>
+								<div class="row">
+									<div class="col-md-1 col-sm-1"></div>
+									<div class="col-md-3 col-sm-3" style="padding-top:10px;">Cell number <span style="color:red">*</span> </div>
+									<div class="col-md-4 col-sm-4"><input name="txtcell" type="text" maxlength="10" id="txtcell" class="form-control" placeholder="Contact number" required="" onkeypress="return isNumber(event)" onblur="checkcell()" /></div>
+									<div class="col-md-4 col-sm-4"></div>
+								</div>
+								<div class="row">
+									<div class="col-md-1 col-sm-1"></div>
+									<div class="col-md-3 col-sm-3"></div>
+									<div class="col-md-4 col-sm-4"><span id="mcell" class="meta-data-thick"></span></div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-1 col-sm-1"></div>
+									<div class="col-md-3 col-sm-3" style="padding-top:10px;">Enter City/Town <span style="color:red">*</span> </div>
+									<div class="col-md-4 col-sm-4"><input name="txtcity" type="text" maxlength="50" id="txtcity" class="form-control" placeholder="City you live" required="" /></div>
+								</div>
+								<div class="row">
+									<div class="col-md-1 col-sm-1"></div>
+									<div class="col-md-3 col-sm-3" style="padding-top:10px;">Mail id (Optional)</div>
+									<div class="col-md-4 col-sm-4"><input name="txtmail" type="text" maxlength="50" id="txtmail" class="form-control" placeholder="Your mail id" /></div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-1 col-sm-1"></div>
+									<div class="col-md-3 col-sm-3" style="padding-top:10px;">Amount <span style="color:red">*</span> </div>
+									<div class="col-md-4 col-sm-4"><input name="txtuser" type="text" maxlength="30" id="txtuser" class="form-control" placeholder="Username" required="" onblur="finduser()" /></div>
+									<div class="col-md-4 col-sm-4"><span id="uname" class="meta-data-thick"></span></div>
+								</div>
+                <div class="row">
+									<div class="col-md-1 col-sm-1"></div>
+									<div class="col-md-3 col-sm-3" style="padding-top:10px;">Reason for loan <span style="color:red">*</span> </div>
+									<div class="col-md-4 col-sm-4"><input name="txtuser" type="text" maxlength="30" id="txtuser" class="form-control" placeholder="Reason" required="" onblur="finduser()" /></div>
+									<div class="col-md-4 col-sm-4"><span id="uname" class="meta-data-thick"></span></div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-1 col-sm-1"></div>
+									<div class="col-md-3 col-sm-3" style="padding-top:10px;">Password to login <span style="color:red">*</span> </div>
+									<div class="col-md-4 col-sm-4"><input name="txtpass" type="password" maxlength="30" id="txtpass" class="form-control" placeholder="Password" required="" /></div>
+									<div class="col-md-4 col-sm-4"><span id="upass" class="meta-data-thick"></span></div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-1 col-sm-1"></div>
+									<div class="col-md-3 col-sm-3" style="padding-top:10px;">Year of birth <span style="color:red">*</span> </div>
+									<div class="col-md-4 col-sm-4"><input name="txtyear" type="password" maxlength="4" id="txtyear" class="form-control" placeholder="Birth year (eg. 1987)" required="" onkeypress="return isNumber(event)" onblur="checkyear();" /></div>
+									<div class="col-md-4 col-sm-4"><span id="cyear" class="meta-data-thick"></span></div>
+								</div>
+								<hr />
+								<div class="row">
+									<div class="col-md-2 col-sm-2"></div>
+									<div class="col-md-3 col-sm-3"><input type="submit" name="btncont" value="Continue..." id="btncont" class="btn btn-primary" /></div>
+								</div>
+							</form>
+						</div>
+						<div class="col-md-4 sidebar-block">
+							<!-- <div class="widget sidebar-widget widget_categories"><br /><br /><br /><br /><br /><br /><img src="images/mobile.png" alt="" /></div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="parallax parallax5 parallax-light text-align-center padding-tb100" style="background-image:url( 'images/parallax6.jpg' )">
+				<h2>Making someone smile is the most<br>beautiful thing in this world</h2><a href="#"></a></div>
+			<div class="accent-bg padding-tb20 cta-fw">
+				<div class="container"><a href="regme.html" class="btn btn-default btn-ghost btn-light btn-rounded pull-right">Become a Member</a>
+					<h4>Let's start doing your best for the world. Join us as a investor</h4></div>
+			</div>
+		</div>
+		<div class="site-footer parallax parallax3" style="background-image:url('images/parallax3.jpg')">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4">
+						<div class="widget footer_widget">
+							<h4 class="widgettitle">About Zaka</h4>
+							<p><img src="images/logo.png" alt="logo" /></p>
+							<p>Zaka International is an SME investment company that aims to bridge short-term financing gap of small and medium sized enterprises in Kenya so that they attain scale to large businesses further contributing to wealth generation and employment creation in Kenya and beyond.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="widget footer_widget widget_links">
+							<h4 class="widgettitle">Links Might Help You</h4>
+							<ul>
+								<li><a href="opp.html">Opportunities </a></li>
+								<li><a href="about.html">Our mission</a></li>
+								<li><a href="faq.html">Have Questions?</a></li>
+								<li><a href="contact.html">Talk to us</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="widget footer_widget">
+							<h4 class="widgettitle">STAY CONNECTED</h4>
+							<p>Contact us at :
+								<h4 class="widgettitle" style="text-transform:lowercase;">info@zaka.co.ke</h4>
+								<ul class="social-icons-rounded social-icons-colored">
+									<li class="facebook"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+									<li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li class="googleplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+									<li class="youtube"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+								</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="site-footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6">
+						<div class="copyrights-col-left">
+							<p>&copy; 2017 <b>Zaka</b>. All Rights Reserved</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6"></div>
+					<div class="copyrights-col-right">
+						<ul class="footer-menu">
+							<li><a href="regme.html">Register with us</a></li>
+							<li><a href="logme.html">Login now</a></li>
+							<li><a href="terms.html">Terms &amp; conditions</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div><a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+	</div>
+
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<!-- Jquery Library Call -->
+	<script src="vendor/magnific/jquery.magnific-popup.min.js"></script>
+	<!-- PrettyPhoto Plugin -->
+	<script src="js/ui-plugins.js"></script>
+	<!-- UI Plugins -->
+	<script src="js/helper-plugins.js"></script>
+	<!-- Helper Plugins -->
+	<script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="js/bootstrap.js"></script>
+	<!-- UI -->
+	<script src="js/init.js"></script>
+	<!-- All Scripts -->
+	<script src="vendor/flexslider/js/jquery.flexslider.js"></script>
+	<!-- FlexSlider -->
+	<!--<script src="js/circle-progress.js"></script>-->
+	<!-- Circle Progress Bars -->
+
+	<script type="text/javascript">
+		function Findsponsor() {
+			var mesg = $("#sponsor")[0];
+			var spname = $('#txtsp').val();
+			if (spname == '') {
+				mesg.innerHTML = 'Enter sponsor id';
+				mesg.style.display = 'block';
+				$('#txtsp').focus();
+				return false;
+			} else {
+				mesg.style.display = 'none';
+			}
+			$.ajax({
+				type: "POST",
+				url: "regme.html/Findsponsor",
+				data: '{userName: "' + spname + '",pageId:"contactUs" }',
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				success: OnSuccess,
+				failure: function(response) {
+					alert(response);
+				}
+			});
+		}
+
+		function OnSuccess(response) {
+			var mesg = $("#sponsor")[0];
+			if (response.d == 'No') {
+				mesg.innerHTML = 'Invalid sponsor id';
+				$('#SpDiv').removeClass();
+				$('#SpDiv').addClass('errorMsg');
+				$('#txtSpID').focus();
+
+			} else {
+				mesg.innerHTML = response.d;
+				$('#SpDiv').removeClass('errorMsg');
+				$('#SpDiv').addClass('infoMsg');
+			}
+			mesg.style.display = 'block';
+		}
+
+		function checkcell() {
+
+			var mesg = $("#mcell")[0];
+			var mcell = $('#txtcell').val();
+			if (mcell.length < 10) {
+				mesg.innerHTML = 'Invalid cell number';
+				mesg.style.display = 'block';
+				mesg.style.color = 'Red';
+				$('#txtcell').focus();
+				return false;
+			} else {
+				mesg.style.display = 'none';
+			}
+		}
+
+		function finduser() {
+			var mesg = $("#uname")[0];
+			var spname = $('#txtuser').val();
+			if (spname == '') {
+				mesg.innerHTML = 'Enter user name';
+				mesg.style.display = 'block';
+				$('#txtuser').focus();
+				return false;
+			} else {
+				mesg.style.display = 'none';
+			}
+			$.ajax({
+				type: "POST",
+				url: "regme.html/CheckUserName",
+				data: '{userName: "' + spname + '",pageId:"contactUs" }',
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				success: OnSuccessx,
+				failure: function(response) {
+					alert(response);
+				}
+			});
+		}
+
+		function OnSuccessx(response) {
+			var mesg = $("#uname")[0];
+			if (response.d == 'No') {
+				mesg.innerHTML = 'User name alredy given';
+				mesg.style.color = 'Red';
+				$('#UserDiv').removeClass();
+				$('#UserDiv').addClass('errorMsg');
+				$('#txtUserID').focus();
+			} else {
+				mesg.innerHTML = 'User name available';
+				mesg.style.color = 'Green';
+				$('#UserDiv').removeClass('errorMsg');
+				$('#UserDiv').addClass('successMsg');
+			}
+			mesg.style.display = 'block';
+		}
+
+
+		function checkyear() {
+
+			var mesg = $("#cyear")[0];
+			var mcell = $('#txtyear').val();
+			if (mcell.length < 4) {
+				mesg.innerHTML = 'Enter all 4 digit';
+				mesg.style.display = 'block';
+				mesg.style.color = 'Red';
+				$('#txtyear').focus();
+				return false;
+			} else {
+				mesg.style.display = 'none';
+			}
+		}
+	</script>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a0ab968a715c6db"></script>
+	<script type="text/javascript">
+		var Tawk_API = Tawk_API || {},
+			Tawk_LoadStart = new Date();
+		(function() {
+			var s1 = document.createElement("script"),
+				s0 = document.getElementsByTagName("script")[0];
+			s1.async = true;
+			s1.src = 'https://embed.tawk.to/5a0abc2ebb0c3f433d4c9127/default';
+			s1.charset = 'UTF-8';
+			s1.setAttribute('crossorigin', '*');
+			s0.parentNode.insertBefore(s1, s0);
+		})();
+	</script>
+</body>
+
+</html>
