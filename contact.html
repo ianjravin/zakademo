@@ -64,56 +64,48 @@
       </div>
     </div>
     <div id="main-container">
-      <div class="content">
-        <div class="container">
-          <div class="row">
-            <h1>Reach us</h1>
-            <div class="col-md-8 content-block">
-              <form method="post" id="contactform" name="contactform" class="contact-form clearfix" action="send-contact.php">
-                <div class="row">
-                  <h3 class="widgettitle">Have a questions or comments? Drop us a line</h3>
-                  <p>Interested in working with us.? Fill the form and tell us about you, your queries and suggestions. We will try to solve it ASAP. Have any questions? Check the <a href="faq.html">FAQ</a> page first. If it is not answered there, fill out
-                    the general inquiry form. Please allow a couple of working hours to respond.</p>
-                  <div class="form-group">
-                    <div class="col-md-4 col-sm-4"><input type="text" id="fname" name="Full Name" class="form-control input-lg" placeholder="Full name*" required="" maxlength="30"></div>
-                    <div class="col-md-4 col-sm-4"><input type="email" id="email" name="email" class="form-control input-lg" placeholder="Email*" maxlength="50"></div>
-                    <div class="col-md-4 col-sm-4"><input type="text" id="phone" name="phone" class="form-control input-lg" placeholder="Phone" required="" maxlength="10" onkeypress="return isNumber(event)"></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-group">
-                    <div class="col-md-12"><textarea cols="8" rows="4" id="comments" name="comments" class="form-control input-lg" placeholder="Your comments" required=""></textarea></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-group">
-                    <div class="col-md-5"><input id="submit" name="submit" type="submit" class="btn btn-primary btn-lg  " value="Submit now!"></div>
-                    <div class="col-md-7">
-                      <div id="message"></div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              <div class="clearfix"></div>
-            </div>
-            <div class="col-md-4 sidebar-block">
-              <div class="widget widget_recent_causes">
-                <h3 class="widgettitle">Read before you send</h3>
-                <ul>
-                  <li>
-                    <h5><a href="#">Contact us on info@zaka.co.ke</a></h5></li>
-                  <li>
-                    <h5><a href="#">We read every mail that arrives in inbox.  Sometimes we can't respond all.  But we always try to solve your issues in priority.</a></h5></li>
-                  <li>
-                    <h5><a href="#">Please be specific about your issue.  Don't write long essays.</a></h5></li>
-                  <li>
-                    <h5><a href="#">Finally we will say, give us a shout, we will make you a believer.</a></h5></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <section id="contact">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<div class="section-title">
+    						<h1>Contact us</h1>
+    						<span class="st-border"></span>
+    					</div>
+    				</div>
+    				<div class="col-sm-4 contact-info">
+    					<p class="contact-content">We are happy to hear from you, please contact us.</p>
+
+    					<p class="st-phone"><i class="fa fa-mobile"></i> <strong>+254 722 940 878</strong></p>
+    					<p class="st-email"><i class="fa fa-envelope-o"></i> <strong>info@zaka.co.ke</strong></p>
+    					<p class="st-website"><i class="fa fa-globe"></i> <strong>www.zaka.co.ke</strong></p>
+
+    				</div>
+    				<div class="col-sm-7 col-sm-offset-1">
+    					<form action="php/send-contact.php" class="contact-form" name="contact-form" method="post">
+    						<div class="row">
+    							<div class="col-sm-6">
+    								<input type="text" name="name" required="required" placeholder="Name*">
+    							</div>
+    							<div class="col-sm-6">
+    								<input type="email" name="email" required="required" placeholder="Email*">
+    							</div>
+    							<div class="col-sm-6">
+    								<input type="text" name="subject" placeholder="Subject">
+    							</div>
+    						
+    							<div class="col-sm-12">
+    								<textarea name="message" required cols="30" rows="7" placeholder="Message*"></textarea>
+    							</div>
+    							<div class="col-sm-12">
+    								<input type="submit" name="submit" value="Send Message" class="btn btn-send">
+    							</div>
+    						</div>
+    					</form>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
     <div style="width: 100%"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32963.29685613443!2d36.717566960380324!3d-1.3649862550128284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x84241ea359899b18!2sKaren+Hardy+Post+Office!5e0!3m2!1sen!2ske!4v1519199793666" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div><br />
 
       <div class="parallax parallax5 parallax-light text-align-center padding-tb100" style="background-image:url( 'images/parallax6.jpg' )">
