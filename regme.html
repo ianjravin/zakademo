@@ -32,7 +32,7 @@
 				<div class="container">
 					<div class="site-logo"><a href="index.html" class="default-logo"><img src="images/logo.png" alt="Logo" /></a><a href="index.html" class="default-retina-logo"><img src="images/logo@2x.png" alt="Logo" width="199" height="30" /></a><a href="index.html" class="sticky-logo"><img src="images/sticky-logo.png" alt="Logo" /></a>
 						<a
-						  href="index.html" class="sticky-retina-logo"><img src="images/sticky-logo@2x.png" alt="Logo" width="199" height="30" /></a>
+						  href="index.html" class="sticky-retina-logo"><img src="images/sticky-logo.png" alt="Logo" width="199" height="30" /></a>
 					</div><a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
 					<ul class="sf-menu dd-menu pull-right" role="menu">
 						<li><a href="index.html">Home</a>
@@ -93,12 +93,12 @@
 								<div class="row">
 									<div class="col-md-1 col-sm-1"></div>
 									<div class="col-md-3 col-sm-3" style="padding-top:10px;">Enter your name <span style="color:red">*</span> </div>
-									<div class="col-md-4 col-sm-4"><input name="txtname" type="text" maxlength="50" id="txtname" class="form-control" placeholder="Full name" required="" /></div>
+									<div class="col-md-4 col-sm-4"><input name="txtname" type="text" maxlength="50" id="txtname" class="form-control" placeholder="Full name"  required="" /></div>
 								</div>
 								<div class="row">
 									<div class="col-md-1 col-sm-1"></div>
 									<div class="col-md-3 col-sm-3" style="padding-top:10px;">Cell number <span style="color:red">*</span> </div>
-									<div class="col-md-4 col-sm-4"><input name="txtcell" type="text" maxlength="10" id="txtcell" class="form-control" placeholder="Contact number" required="" onkeypress="return isNumber(event)" onblur="checkcell()" /></div>
+									<div class="col-md-4 col-sm-4"><input  name="txtcell" type="text" maxlength="10" id="txtcell" class="form-control" placeholder="Contact number" required="" onkeyup="checkText()" onblur="checkcell()" /></div>
 									<div class="col-md-4 col-sm-4"><span class="meta-data-thick" style="color:red">We will send an OTP on this number to verify that it's you</span></div>
 								</div>
 								<div class="row">
@@ -352,6 +352,9 @@
 	</script>
 </body>
 <script>
+
+
+
 function submitData(){
   const name = document.getElementById('txtname').value
  const email = document.getElementById('txtmail').value
@@ -363,33 +366,49 @@ function submitData(){
 
  console.log(name);
 
+if (contacts === '' || email === '' || username === '' || location === '' || password === '' || dob === '') {
+	alert('fill in all the details')
+	return
 
-  axios.get('http://zaka.nouveta.co.ke/api/bootstrap.php?function=newInvestor',{
-    params:{
-      investorNames:name,
-      investorEmail:email,
-      investorContacts:contacts,
-      investorLocatio:location,
-      investorDOB:dob,
-      username:username,
-      password:password,
-    }
+} else {
+	axios.get('http://zaka.nouveta.co.ke/api/bootstrap.php?function=newInvestor',{
+		params:{
+			investorNames:name,
+			investorEmail:email,
+			investorContacts:contacts,
+			investorLocatio:location,
+			investorDOB:dob,
+			username:username,
+			password:password,
+		}
 
-  })
-    .then(function (response) {
-      console.log(username);
+	})
+		.then(function (response) {
+			console.log(username);
 
-      if (response.status === 200){
-        alert('user succesfully registered')
-        window.location.replace("welcome.html");
-      }
+			if (response.status === 200){
 
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+				alert('user succesfully registered')
+				window.location.replace("welcome.html");
+			}
+
+			console.log(response);
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
+
 }
+
+
+
+
+
+
+}
+
+
+
 
 
 
