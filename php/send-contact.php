@@ -1,17 +1,16 @@
 <?php
 
-	$name = @trim(stripslashes($_POST['name']));
+	$fname = @trim(stripslashes($_POST['fname']));
 	$email = @trim(stripslashes($_POST['email']));
-	$subject = @trim(stripslashes($_POST['subject']));
-	$website = @trim(stripslashes($_POST['website']));
-	$comment = @trim(stripslashes($_POST['message']));
+	$phone = @trim(stripslashes($_POST['phone']));
+	$comment = @trim(stripslashes($_POST['comments']));
 
 	$email_from = $email;
-	$email_to = 'info@zaka.co.ke';//replace with your email
+	$email_to = 'ian@nouveta.tech';//replace with your email
 
-	$body = 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'Subject: ' . $subject . "\n\n" . 'Website: ' . $website . "\n\n" . 'Message: ' . $message;
+	$body = 'Name: ' . $fname . "\n\n" . 'Email: ' . $email . "\n\n" . 'Phone: ' . $phone .  "\n\n" . 'Comments: ' . $comments;
 
-	$success = @mail($email_to, $body, 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'Subject: ' . $subject . "\n\n" . 'Website: ' . $website . "\n\n" . 'Message: ' . $message);
+	$success = @mail($email_to, $body, 'Name: ' . $fname . "\n\n" . 'Email: ' . $email . "\n\n" . 'Phone: ' . $phone . "\n\n" . 'Comments: ' . $comments);
 
 ?>
 
